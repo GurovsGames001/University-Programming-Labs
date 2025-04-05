@@ -1,4 +1,4 @@
-#ifndef DIRECTED_GRAPH_AND_BUILDER_METAGRAPH_H
+п»ї#ifndef DIRECTED_GRAPH_AND_BUILDER_METAGRAPH_H
 #define DIRECTED_GRAPH_AND_BUILDER_METAGRAPH_H
 
 #include <vector>
@@ -24,7 +24,7 @@ public:
 	friend BuilderMetagraph;
 
 private:
-	std::vector<std::list<int>> adj; // Списки смежности орграфа
+	std::vector<std::list<int>> adj; // РЎРїРёСЃРєРё СЃРјРµР¶РЅРѕСЃС‚Рё РѕСЂРіСЂР°С„Р°
 
 };
 
@@ -38,21 +38,21 @@ public:
 
 	~BuilderMetagraph() {};
 	
-	void buildMetagraph(const DirectedGraph& graph); // Построение метаграфа орграфа
-	void const printSCC(); // Вывод ССК орграфа
-	void const printMetagraph(); // Вывод метаграфа орграфа
+	void buildMetagraph(const DirectedGraph& graph); // РџРѕСЃС‚СЂРѕРµРЅРёРµ РјРµС‚Р°РіСЂР°С„Р° РѕСЂРіСЂР°С„Р°
+	void const printSCC(); // Р’С‹РІРѕРґ РЎРЎРљ РѕСЂРіСЂР°С„Р°
+	void const printMetagraph(); // Р’С‹РІРѕРґ РјРµС‚Р°РіСЂР°С„Р° РѕСЂРіСЂР°С„Р°
 
 private:
-	void buildGraphReverse(const DirectedGraph& graph); // Построение обращения орграфа
-	void getSCC(const DirectedGraph& graph); // Получение ССК орграфа
+	void buildGraphReverse(const DirectedGraph& graph); // РџРѕСЃС‚СЂРѕРµРЅРёРµ РѕР±СЂР°С‰РµРЅРёСЏ РѕСЂРіСЂР°С„Р°
+	void getSCC(const DirectedGraph& graph); // РџРѕР»СѓС‡РµРЅРёРµ РЎРЎРљ РѕСЂРіСЂР°С„Р°
 	void visit(const int vertex, const DirectedGraph& graph,
 		std::vector<bool>& visited, std::vector<int>& arrayForPostVisit,
 		void (*postVisit)(const int vertex, std::vector<int>& arrayForPostVisit));
 
-	DirectedGraph graphReverse; // Обращение орграфа
-	std::vector<int> numSCC; // Массив с номерами ССК орграфа
-	std::vector<std::list<int>> arrayForPrintSCC; // Массив с ССК орграфа
-	DirectedGraph metagraph; // Метаграф орграфа
+	DirectedGraph graphReverse; // РћР±СЂР°С‰РµРЅРёРµ РѕСЂРіСЂР°С„Р°
+	std::vector<int> numSCC; // РњР°СЃСЃРёРІ СЃ РЅРѕРјРµСЂР°РјРё РЎРЎРљ РѕСЂРіСЂР°С„Р°
+	std::vector<std::list<int>> arrayForPrintSCC; // РњР°СЃСЃРёРІ СЃ РЎРЎРљ РѕСЂРіСЂР°С„Р°
+	DirectedGraph metagraph; // РњРµС‚Р°РіСЂР°С„ РѕСЂРіСЂР°С„Р°
 
 };
 
