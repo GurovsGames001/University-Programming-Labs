@@ -1,0 +1,14 @@
+Класс: String
+Gurov Alexandr 2002
+Baranova Darya 2003
+Baranov Igor 2004
+Borodkin Ivan 2005
+Ivanov Ivan 2005
+
+Класс: std::string
+Gurov Alexandr 2002
+Baranova Darya 2003
+Baranov Igor 2004
+Borodkin Ivan 2005
+Ivanov Ivan 2005
+

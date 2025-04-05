@@ -1,0 +1,17 @@
+jgh
+(:key1 076:key2 #c(1.0 -1.0):key3 "Data":)
+
+asd
+(:key2 #c(2.0 -1.0):key3 "Data":)
+(:key2 #c(2.0 -1.0)::key1 066:key3 "Data":)
+(:key2 #c(2.0 -1.0)key1 066:key3 "Data":)
+(:key3 "Hello":key2 #c(1.0 -1.0):key1 056)
+
+(:key3 "Data":key2 #c(1.0,-1.0):key1 056:)
+
+(:key3 "Data":key2 #c(1.0 -1.0):key1 056:)
+(:key2 #c(2.0 -1.0):key1 066:key3 "Data2":)
+(:key2 #c(2.0 -1.0):key1 066:key3 "Data":)
+(:key3 "Hello":key2 #c(1.0 -1.0):key1 066:)
+(:key1 076:key2 #c(1.0 -1.0):key3 "Ask":)
+dsd
