@@ -1,4 +1,4 @@
-#ifndef _CIRCLE
+п»ї#ifndef _CIRCLE
 #define _CIRCLE
 #include "shape.h"
 
@@ -9,18 +9,18 @@ public:
 	Circle(double x, double y, double radius) : centre_(x, y), radius_(radius) { isCorrect(); };
 	~Circle() {};
 
-	double getArea() const override; // Вычисление площади
-	rectangle_t getFrameRect() const override; // Получение ограничивающего прямоугольника
-	void move(point_t newPos) override; // Перемещение центра фигуры в конкретную точку
-	void move(double k1, double k2) override; // Перемещение центра фигуры в виде смещений по осям абсцисс и ординат
-	void scale(double k) override; // Изотропное масштабирование
-	void print() const override; // Печать данных о фигуре
+	double getArea() const override; // Р’С‹С‡РёСЃР»РµРЅРёРµ РїР»РѕС‰Р°РґРё
+	rectangle_t getFrameRect() const override; // РџРѕР»СѓС‡РµРЅРёРµ РѕРіСЂР°РЅРёС‡РёРІР°СЋС‰РµРіРѕ РїСЂСЏРјРѕСѓРіРѕР»СЊРЅРёРєР°
+	void move(point_t newPos) override; // РџРµСЂРµРјРµС‰РµРЅРёРµ С†РµРЅС‚СЂР° С„РёРіСѓСЂС‹ РІ РєРѕРЅРєСЂРµС‚РЅСѓСЋ С‚РѕС‡РєСѓ
+	void move(double k1, double k2) override; // РџРµСЂРµРјРµС‰РµРЅРёРµ С†РµРЅС‚СЂР° С„РёРіСѓСЂС‹ РІ РІРёРґРµ СЃРјРµС‰РµРЅРёР№ РїРѕ РѕСЃСЏРј Р°Р±СЃС†РёСЃСЃ Рё РѕСЂРґРёРЅР°С‚
+	void scale(double k) override; // РР·РѕС‚СЂРѕРїРЅРѕРµ РјР°СЃС€С‚Р°Р±РёСЂРѕРІР°РЅРёРµ
+	void print() const override; // РџРµС‡Р°С‚СЊ РґР°РЅРЅС‹С… Рѕ С„РёРіСѓСЂРµ
 
 private:
 	point_t centre_;
 	double radius_;
 
-	void isCorrect() const override; // Проверка корректности прямоугольника
+	void isCorrect() const override; // РџСЂРѕРІРµСЂРєР° РєРѕСЂСЂРµРєС‚РЅРѕСЃС‚Рё РїСЂСЏРјРѕСѓРіРѕР»СЊРЅРёРєР°
 };
 
 #endif

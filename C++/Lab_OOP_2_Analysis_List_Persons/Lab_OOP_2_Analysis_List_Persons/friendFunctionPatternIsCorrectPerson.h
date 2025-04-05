@@ -1,6 +1,6 @@
-int getNumberStringInFile(); // Функция получения номера строки
+п»їint getNumberStringInFile(); // Р¤СѓРЅРєС†РёСЏ РїРѕР»СѓС‡РµРЅРёСЏ РЅРѕРјРµСЂР° СЃС‚СЂРѕРєРё
 
-// Проверка корректности фамилии
+// РџСЂРѕРІРµСЂРєР° РєРѕСЂСЂРµРєС‚РЅРѕСЃС‚Рё С„Р°РјРёР»РёРё
 template <typename Lines>
 bool isCorrectSurname(const Lines& surname, size_t sizeStr)
 {
@@ -23,7 +23,7 @@ bool isCorrectSurname(const Lines& surname, size_t sizeStr)
 	return isTrue;
 }
 
-// Проверка корректности имени
+// РџСЂРѕРІРµСЂРєР° РєРѕСЂСЂРµРєС‚РЅРѕСЃС‚Рё РёРјРµРЅРё
 template <typename Lines>
 bool isCorrectName(const Lines& name, size_t sizeStr)
 {
@@ -46,7 +46,7 @@ bool isCorrectName(const Lines& name, size_t sizeStr)
 	return isTrue;
 }
 
-// Проверка корректности года рождения
+// РџСЂРѕРІРµСЂРєР° РєРѕСЂСЂРµРєС‚РЅРѕСЃС‚Рё РіРѕРґР° СЂРѕР¶РґРµРЅРёСЏ
 template <typename Lines>
 bool isCorrectYearBirth(const Lines& yearBirth, size_t sizeStr)
 {

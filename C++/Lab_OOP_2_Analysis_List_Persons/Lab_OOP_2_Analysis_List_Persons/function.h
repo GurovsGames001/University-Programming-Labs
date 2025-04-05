@@ -1,6 +1,6 @@
-#include "Person.h"
+п»ї#include "Person.h"
 
-// Сортировка
+// РЎРѕСЂС‚РёСЂРѕРІРєР°
 template <typename Lines>
 void sortPersons(Person<Lines>** array, const int n)
 {
@@ -18,7 +18,7 @@ void sortPersons(Person<Lines>** array, const int n)
 	}
 }
 
-// Функция подсчёта различных имён
+// Р¤СѓРЅРєС†РёСЏ РїРѕРґСЃС‡С‘С‚Р° СЂР°Р·Р»РёС‡РЅС‹С… РёРјС‘РЅ
 template <typename Lines>
 int countDifferentName(Person<Lines>** array, const int n)
 {
@@ -37,7 +37,7 @@ int countDifferentName(Person<Lines>** array, const int n)
 	return nDifferentName;
 }
 
-// Функция определения наличия одинаковых имён у персон, родившихся в один год
+// Р¤СѓРЅРєС†РёСЏ РѕРїСЂРµРґРµР»РµРЅРёСЏ РЅР°Р»РёС‡РёСЏ РѕРґРёРЅР°РєРѕРІС‹С… РёРјС‘РЅ Сѓ РїРµСЂСЃРѕРЅ, СЂРѕРґРёРІС€РёС…СЃСЏ РІ РѕРґРёРЅ РіРѕРґ
 template <typename Lines>
 bool isIdenticalName(Person<Lines>** array, const int n)
 {
@@ -68,7 +68,7 @@ bool isIdenticalName(Person<Lines>** array, const int n)
 	return isTrue;
 }
 
-// Функция вывода массива в файл
+// Р¤СѓРЅРєС†РёСЏ РІС‹РІРѕРґР° РјР°СЃСЃРёРІР° РІ С„Р°Р№Р»
 template <typename Lines>
 void outArray(Person<Lines>** array, const int n, std::ofstream& fout)
 {

@@ -1,4 +1,4 @@
-#include "overloadedInputOutput.h"
+﻿#include "overloadedInputOutput.h"
 #include <string>
 
 std::istream& operator>>(std::istream& in, Polygon& dest)

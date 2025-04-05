@@ -1,4 +1,4 @@
-#include "functions.h"
+﻿#include "functions.h"
 
 void executeMaxseq(const std::vector<Polygon>& data, const Polygon& parameter)
 {

@@ -1,4 +1,4 @@
-#include <iterator>
+﻿#include <iterator>
 #include "DataStruct.h"
 
 std::istream& operator>>(std::istream& in, DataStruct& ob);

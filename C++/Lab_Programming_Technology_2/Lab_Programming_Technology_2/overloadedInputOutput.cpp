@@ -1,4 +1,4 @@
-#include "overloadedInputOutput.h"
+﻿#include "overloadedInputOutput.h"
 #include <iomanip>
 
 std::istream& operator>>(std::istream& in, DataStruct& dest)

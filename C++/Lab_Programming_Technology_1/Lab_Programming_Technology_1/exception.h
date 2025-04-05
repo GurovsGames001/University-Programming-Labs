@@ -1,11 +1,11 @@
-#ifndef _EXCEPTION
+п»ї#ifndef _EXCEPTION
 #define _EXCEPTION
 #include <exception>
 
 class ErrorNoCorrectRectangle : public std::exception
 {
 public:
-	ErrorNoCorrectRectangle(): reason_("ERROR: Прямоугольник задан неправильно") {}
+	ErrorNoCorrectRectangle(): reason_("ERROR: РџСЂСЏРјРѕСѓРіРѕР»СЊРЅРёРє Р·Р°РґР°РЅ РЅРµРїСЂР°РІРёР»СЊРЅРѕ") {}
 	const char* what() const { return reason_; }
 private:
 	const char* reason_;
@@ -14,7 +14,7 @@ private:
 class ErrorNoCorrectCircle : public std::exception
 {
 public:
-	ErrorNoCorrectCircle() : reason_("ERROR: Круг задан неправильно") {}
+	ErrorNoCorrectCircle() : reason_("ERROR: РљСЂСѓРі Р·Р°РґР°РЅ РЅРµРїСЂР°РІРёР»СЊРЅРѕ") {}
 	const char* what() const { return reason_; }
 private:
 	const char* reason_;
@@ -23,7 +23,7 @@ private:
 class ErrorNoCorrectParallelogram : public std::exception
 {
 public:
-	ErrorNoCorrectParallelogram() : reason_("ERROR: Параллелограмм задан неправильно") {}
+	ErrorNoCorrectParallelogram() : reason_("ERROR: РџР°СЂР°Р»Р»РµР»РѕРіСЂР°РјРј Р·Р°РґР°РЅ РЅРµРїСЂР°РІРёР»СЊРЅРѕ") {}
 	const char* what() const { return reason_; }
 private:
 	const char* reason_;

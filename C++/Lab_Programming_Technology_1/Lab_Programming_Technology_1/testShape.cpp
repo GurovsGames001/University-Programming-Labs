@@ -1,30 +1,30 @@
-#include <memory>
+ï»¿#include <memory>
 #include <iostream>
 #include "shape.h"
 
 void testShape(std::shared_ptr<Shape> shape)
 {
-	std::cout << "Ïëîùàäü: " << shape->getArea() << '\n';
+	std::cout << "ÐŸÐ»Ð¾Ñ‰Ð°Ð´ÑŒ: " << shape->getArea() << '\n';
 
 	rectangle_t rectangle;
 	rectangle = shape->getFrameRect();
-	std::cout << "Øèðèíà îãðàíè÷èâàþùåãî ïðÿìîóãîëüíèêà: " << rectangle.width_ << '\n';
-	std::cout << "Âûñîòà îãðàíè÷èâàþùåãî ïðÿìîóãîëüíèêà: " << rectangle.height_ << '\n';
-	std::cout << "Öåíòð îãðàíè÷èâàþùåãî ïðÿìîóãîëüíèêà: (" << rectangle.pos_.x_ << "; " << rectangle.pos_.y_ << ")\n";
+	std::cout << "Ð¨Ð¸Ñ€Ð¸Ð½Ð° Ð¾Ð³Ñ€Ð°Ð½Ð¸Ñ‡Ð¸Ð²Ð°ÑŽÑ‰ÐµÐ³Ð¾ Ð¿Ñ€ÑÐ¼Ð¾ÑƒÐ³Ð¾Ð»ÑŒÐ½Ð¸ÐºÐ°: " << rectangle.width_ << '\n';
+	std::cout << "Ð’Ñ‹ÑÐ¾Ñ‚Ð° Ð¾Ð³Ñ€Ð°Ð½Ð¸Ñ‡Ð¸Ð²Ð°ÑŽÑ‰ÐµÐ³Ð¾ Ð¿Ñ€ÑÐ¼Ð¾ÑƒÐ³Ð¾Ð»ÑŒÐ½Ð¸ÐºÐ°: " << rectangle.height_ << '\n';
+	std::cout << "Ð¦ÐµÐ½Ñ‚Ñ€ Ð¾Ð³Ñ€Ð°Ð½Ð¸Ñ‡Ð¸Ð²Ð°ÑŽÑ‰ÐµÐ³Ð¾ Ð¿Ñ€ÑÐ¼Ð¾ÑƒÐ³Ð¾Ð»ÑŒÐ½Ð¸ÐºÐ°: (" << rectangle.pos_.x_ << "; " << rectangle.pos_.y_ << ")\n";
 
 	point_t point(10.1, -15.5);
-	std::cout << "Ôèãóðà â íà÷àëüíîé ïîçèöèè: ";
+	std::cout << "Ð¤Ð¸Ð³ÑƒÑ€Ð° Ð² Ð½Ð°Ñ‡Ð°Ð»ÑŒÐ½Ð¾Ð¹ Ð¿Ð¾Ð·Ð¸Ñ†Ð¸Ð¸: ";
 	shape->print();
 	shape->move(point);
-	std::cout << "Ôèãóðà ïîñëå ïåðåìåùåíèÿ öåíòðà â òî÷êó: ";
+	std::cout << "Ð¤Ð¸Ð³ÑƒÑ€Ð° Ð¿Ð¾ÑÐ»Ðµ Ð¿ÐµÑ€ÐµÐ¼ÐµÑ‰ÐµÐ½Ð¸Ñ Ñ†ÐµÐ½Ñ‚Ñ€Ð° Ð² Ñ‚Ð¾Ñ‡ÐºÑƒ: ";
 	shape->print();
 	shape->move(5.5, 7.5);
-	std::cout << "Ôèãóðà ïîñëå ïåðåìåùåíèÿ öåíòðà ïî îñÿì: ";
+	std::cout << "Ð¤Ð¸Ð³ÑƒÑ€Ð° Ð¿Ð¾ÑÐ»Ðµ Ð¿ÐµÑ€ÐµÐ¼ÐµÑ‰ÐµÐ½Ð¸Ñ Ñ†ÐµÐ½Ñ‚Ñ€Ð° Ð¿Ð¾ Ð¾ÑÑÐ¼: ";
 	shape->print();
 	
-	std::cout << "Ôèãóðà äî ìàñøòàáèðîâàíèÿ: ";
+	std::cout << "Ð¤Ð¸Ð³ÑƒÑ€Ð° Ð´Ð¾ Ð¼Ð°ÑÑˆÑ‚Ð°Ð±Ð¸Ñ€Ð¾Ð²Ð°Ð½Ð¸Ñ: ";
 	shape->print();
 	shape->scale(3);
-	std::cout << "Ôèãóðà ïîñëå ìàñøòàáèðîâàíèÿ: ";
+	std::cout << "Ð¤Ð¸Ð³ÑƒÑ€Ð° Ð¿Ð¾ÑÐ»Ðµ Ð¼Ð°ÑÑˆÑ‚Ð°Ð±Ð¸Ñ€Ð¾Ð²Ð°Ð½Ð¸Ñ: ";
 	shape->print();
 }

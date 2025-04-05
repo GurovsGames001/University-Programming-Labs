@@ -1,4 +1,4 @@
-#ifndef DIRECTED_GRAPH_AND_CHECKER_ARRAY_FOR_CHANGES
+п»ї#ifndef DIRECTED_GRAPH_AND_CHECKER_ARRAY_FOR_CHANGES
 #define DIRECTED_GRAPH_AND_CHECKER_ARRAY_FOR_CHANGES
 
 #include <vector>
@@ -21,22 +21,22 @@ public:
 
 	~DirectedGraph() {};
 
-	// Добавление в орграф ребра (sourceVertex, destinationVertex) с весом weigth
+	// Р”РѕР±Р°РІР»РµРЅРёРµ РІ РѕСЂРіСЂР°С„ СЂРµР±СЂР° (sourceVertex, destinationVertex) СЃ РІРµСЃРѕРј weigth
 	void addEdge(const unsigned int sourceVertex,
 		const unsigned int destinationVertex, const double weigth);
 
-	// Получение веса ребра (sourceVertex, destinationVertex)
+	// РџРѕР»СѓС‡РµРЅРёРµ РІРµСЃР° СЂРµР±СЂР° (sourceVertex, destinationVertex)
 	double getWeightEdge(const unsigned int sourceVertex,
 		const unsigned int destinationVertex) const;
 
-	// Получение количества вершин орграфа
+	// РџРѕР»СѓС‡РµРЅРёРµ РєРѕР»РёС‡РµСЃС‚РІР° РІРµСЂС€РёРЅ РѕСЂРіСЂР°С„Р°
 	unsigned int getNumberVertex() const;
 
 	friend CheckerArrayForChanges;
 
 private:
-	// Списки смежности орграфа, т. ч. в списке adj[i] находятся пары
-	// (j, w), где w - вес ребра (i, j)
+	// РЎРїРёСЃРєРё СЃРјРµР¶РЅРѕСЃС‚Рё РѕСЂРіСЂР°С„Р°, С‚. С‡. РІ СЃРїРёСЃРєРµ adj[i] РЅР°С…РѕРґСЏС‚СЃСЏ РїР°СЂС‹
+	// (j, w), РіРґРµ w - РІРµСЃ СЂРµР±СЂР° (i, j)
 	std::vector<std::list<std::pair<unsigned int, double>>> adj;
 
 };
@@ -50,16 +50,16 @@ public:
 
 	~CheckerArrayForChanges() {};
 
-	// Проверка массива a[1..|V|] на изменения (вывод результата проверки)
+	// РџСЂРѕРІРµСЂРєР° РјР°СЃСЃРёРІР° a[1..|V|] РЅР° РёР·РјРµРЅРµРЅРёСЏ (РІС‹РІРѕРґ СЂРµР·СѓР»СЊС‚Р°С‚Р° РїСЂРѕРІРµСЂРєРё)
 	void checkArrayForChanges(const DirectedGraph& graph, 
 		const std::vector<double>& a, const int sourceVertex) const;
 
 private:
-	// Проверка массива a[1..|V|] на изменения (сама проверка)
+	// РџСЂРѕРІРµСЂРєР° РјР°СЃСЃРёРІР° a[1..|V|] РЅР° РёР·РјРµРЅРµРЅРёСЏ (СЃР°РјР° РїСЂРѕРІРµСЂРєР°)
 	bool isNoChangeInArray(const DirectedGraph& graph, 
 		const std::vector<double>& a, const int sourceVertex) const;
 
-	// Проверка кратчайшего пути на правильность
+	// РџСЂРѕРІРµСЂРєР° РєСЂР°С‚С‡Р°Р№С€РµРіРѕ РїСѓС‚Рё РЅР° РїСЂР°РІРёР»СЊРЅРѕСЃС‚СЊ
 	bool isCorrectShortestPath(const unsigned int currentVertex,
 		const unsigned int nextVertex, const double weigth, 
 		const std::vector<double>& a) const;

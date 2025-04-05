@@ -1,4 +1,4 @@
-#include <iostream>
+п»ї#include <iostream>
 #include <vector>
 #include <list>
 #include "CheckerArrayForChanges.h"
@@ -47,7 +47,7 @@ void runProgram(std::istream& inStream, std::ostream& outStream)
 	int sourceVertexGraph = 0;
 	inStream >> sourceVertexGraph;
 
-	// Ввод массива a
+	// Р’РІРѕРґ РјР°СЃСЃРёРІР° a
 	std::vector<double> a(nVertex);
 	for (int i = 0; i < nVertex; i++)
 	{

@@ -1,4 +1,4 @@
-#ifndef _BASE_TYPES
+﻿#ifndef _BASE_TYPES
 #define _BASE_TYPES
 
 struct point_t

@@ -1,4 +1,4 @@
-#include <iostream>
+п»ї#include <iostream>
 #include <fstream>
 #include <string>
 #include "String.h"
@@ -6,19 +6,19 @@
 #include "function.h"
 #include "friendFunctionPatternIsCorrectPerson.h"
 
-static int g_numberStringInFile = 2; // Номер строки во входном файле
-int getNumberStringInFile() // Функция получения номера строки
+static int g_numberStringInFile = 2; // РќРѕРјРµСЂ СЃС‚СЂРѕРєРё РІРѕ РІС…РѕРґРЅРѕРј С„Р°Р№Р»Рµ
+int getNumberStringInFile() // Р¤СѓРЅРєС†РёСЏ РїРѕР»СѓС‡РµРЅРёСЏ РЅРѕРјРµСЂР° СЃС‚СЂРѕРєРё
 {
 	return g_numberStringInFile;
 }
 
-const size_t LENGTH_IN_STRING = 45; // Максимальный размер входной строки (37) + немного места на случай лишних пробелов между словами
+const size_t LENGTH_IN_STRING = 45; // РњР°РєСЃРёРјР°Р»СЊРЅС‹Р№ СЂР°Р·РјРµСЂ РІС…РѕРґРЅРѕР№ СЃС‚СЂРѕРєРё (37) + РЅРµРјРЅРѕРіРѕ РјРµСЃС‚Р° РЅР° СЃР»СѓС‡Р°Р№ Р»РёС€РЅРёС… РїСЂРѕР±РµР»РѕРІ РјРµР¶РґСѓ СЃР»РѕРІР°РјРё
 
-const std::string ERROR_FILE_NOT_OPEN = "Ошибка: при открытии файла произошла ошибка";
-const std::string ERROR_NOT_NUMBER = "Ошибка: число записей в файле должно быть представлено целым числом";
-const std::string ERROR_NUMBER_ZERO = "Ошибка: число записей в файле должно быть представлено положительным числом";
-const std::string ERROR_LARGE_NUMBER = "Ошибка: число записей в файле меньше указанного";
-const std::string ERROR_SMALL_NUMBER = "Ошибка: число записей в файле больше указанного";
+const std::string ERROR_FILE_NOT_OPEN = "РћС€РёР±РєР°: РїСЂРё РѕС‚РєСЂС‹С‚РёРё С„Р°Р№Р»Р° РїСЂРѕРёР·РѕС€Р»Р° РѕС€РёР±РєР°";
+const std::string ERROR_NOT_NUMBER = "РћС€РёР±РєР°: С‡РёСЃР»Рѕ Р·Р°РїРёСЃРµР№ РІ С„Р°Р№Р»Рµ РґРѕР»Р¶РЅРѕ Р±С‹С‚СЊ РїСЂРµРґСЃС‚Р°РІР»РµРЅРѕ С†РµР»С‹Рј С‡РёСЃР»РѕРј";
+const std::string ERROR_NUMBER_ZERO = "РћС€РёР±РєР°: С‡РёСЃР»Рѕ Р·Р°РїРёСЃРµР№ РІ С„Р°Р№Р»Рµ РґРѕР»Р¶РЅРѕ Р±С‹С‚СЊ РїСЂРµРґСЃС‚Р°РІР»РµРЅРѕ РїРѕР»РѕР¶РёС‚РµР»СЊРЅС‹Рј С‡РёСЃР»РѕРј";
+const std::string ERROR_LARGE_NUMBER = "РћС€РёР±РєР°: С‡РёСЃР»Рѕ Р·Р°РїРёСЃРµР№ РІ С„Р°Р№Р»Рµ РјРµРЅСЊС€Рµ СѓРєР°Р·Р°РЅРЅРѕРіРѕ";
+const std::string ERROR_SMALL_NUMBER = "РћС€РёР±РєР°: С‡РёСЃР»Рѕ Р·Р°РїРёСЃРµР№ РІ С„Р°Р№Р»Рµ Р±РѕР»СЊС€Рµ СѓРєР°Р·Р°РЅРЅРѕРіРѕ";
 
 int main()
 {
@@ -26,9 +26,9 @@ int main()
 
 	try
 	{
-		// Получение файлов для ввода и вывода
+		// РџРѕР»СѓС‡РµРЅРёРµ С„Р°Р№Р»РѕРІ РґР»СЏ РІРІРѕРґР° Рё РІС‹РІРѕРґР°
 		std::ifstream fin;
-		std::cout << "Введите имя входного файла: ";
+		std::cout << "Р’РІРµРґРёС‚Рµ РёРјСЏ РІС…РѕРґРЅРѕРіРѕ С„Р°Р№Р»Р°: ";
 		std::string inFileName;
 		std::cin >> inFileName; // list_of_persons.txt
 		fin.open(inFileName);
@@ -39,7 +39,7 @@ int main()
 		std::cout << "\n";
 
 		std::ofstream fout;
-		std::cout << "Введите имя выходного файла: ";
+		std::cout << "Р’РІРµРґРёС‚Рµ РёРјСЏ РІС‹С…РѕРґРЅРѕРіРѕ С„Р°Р№Р»Р°: ";
 		std::string outFileName;
 		std::cin >> outFileName; // out_list_of_persons.txt
 		fout.open(outFileName);
@@ -49,7 +49,7 @@ int main()
 		}
 		std::cout << "\n";
 
-		// Ввод информации из файла
+		// Р’РІРѕРґ РёРЅС„РѕСЂРјР°С†РёРё РёР· С„Р°Р№Р»Р°
 		int n = 0;
 		fin >> n;
 
@@ -85,7 +85,7 @@ int main()
 			arrayStdString[i] = tempStr;
 			arrayPointerStdString[i] = &arrayStdString[i];
 
-			g_numberStringInFile++; // номер строки в файле
+			g_numberStringInFile++; // РЅРѕРјРµСЂ СЃС‚СЂРѕРєРё РІ С„Р°Р№Р»Рµ
 		}
 
 		if (!(fin.eof()))
@@ -96,7 +96,7 @@ int main()
 		fin.close();
 		delete[] tempStr;
 
-		// Сортировка и применение других функций
+		// РЎРѕСЂС‚РёСЂРѕРІРєР° Рё РїСЂРёРјРµРЅРµРЅРёРµ РґСЂСѓРіРёС… С„СѓРЅРєС†РёР№
 		sortPersons(arrayPointerMyString, n);
 		sortPersons(arrayPointerStdString, n);
 
@@ -107,26 +107,26 @@ int main()
 
 		std::string isIdenticalNameMyString = "";
 		std::string isIdenticalStdString = "";
-		isIdenticalNameMyString = (isIdenticalName(arrayPointerMyString, n)) ? "Да" : "Нет";
-		isIdenticalStdString = (isIdenticalName(arrayPointerStdString, n)) ? "Да" : "Нет";
+		isIdenticalNameMyString = (isIdenticalName(arrayPointerMyString, n)) ? "Р”Р°" : "РќРµС‚";
+		isIdenticalStdString = (isIdenticalName(arrayPointerStdString, n)) ? "Р”Р°" : "РќРµС‚";
 
-		// Вывод информации в файл
-		fout << "Класс: String" << '\n';
+		// Р’С‹РІРѕРґ РёРЅС„РѕСЂРјР°С†РёРё РІ С„Р°Р№Р»
+		fout << "РљР»Р°СЃСЃ: String" << '\n';
 		outArray(arrayPointerMyString, n, fout);
-		fout << "Класс: std::string" << '\n';
+		fout << "РљР»Р°СЃСЃ: std::string" << '\n';
 		outArray(arrayPointerStdString, n, fout);
 
-		std::cout << "Количество различных имён в файле:\n"
+		std::cout << "РљРѕР»РёС‡РµСЃС‚РІРѕ СЂР°Р·Р»РёС‡РЅС‹С… РёРјС‘РЅ РІ С„Р°Р№Р»Рµ:\n"
 					<< "   1) String: " << nDifferentNameMyString << '\n'
 					<< "   2) std::string: " << nDifferentNameStdString << '\n';
 		std::cout << "\n";
-		std::cout << "Наличие одинаковых имён у персон, родившихся в один год:\n"
+		std::cout << "РќР°Р»РёС‡РёРµ РѕРґРёРЅР°РєРѕРІС‹С… РёРјС‘РЅ Сѓ РїРµСЂСЃРѕРЅ, СЂРѕРґРёРІС€РёС…СЃСЏ РІ РѕРґРёРЅ РіРѕРґ:\n"
 					<< "   1) String: " << isIdenticalNameMyString << '\n'
 					<< "   2) std::string: " << isIdenticalStdString << '\n';
 
 		fout.close();
 
-		// Освобождение памяти
+		// РћСЃРІРѕР±РѕР¶РґРµРЅРёРµ РїР°РјСЏС‚Рё
 		delete[] arrayMyString;
 		delete[] arrayPointerMyString;
 		delete[] arrayStdString;

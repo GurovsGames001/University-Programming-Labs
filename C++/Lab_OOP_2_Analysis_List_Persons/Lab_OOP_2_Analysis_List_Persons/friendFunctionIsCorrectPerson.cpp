@@ -1,12 +1,12 @@
-#include "Person.h"
+п»ї#include "Person.h"
 #include "String.h"
 #include "friendFunctionPatternIsCorrectPerson.h"
 #include <string>
 
-const std::string NUMBER_STRING = "Cтрока файла ";
-const std::string ERROR_NOT_SURNAME = ". Ошибка: фамилия введена неверно";
-const std::string ERROR_NOT_NAME = ". Ошибка: имя введено неверно";
-const std::string ERROR_NOT_YEAR_BIRTH = ". Ошибка: год рождения введён неверно";
+const std::string NUMBER_STRING = "CС‚СЂРѕРєР° С„Р°Р№Р»Р° ";
+const std::string ERROR_NOT_SURNAME = ". РћС€РёР±РєР°: С„Р°РјРёР»РёСЏ РІРІРµРґРµРЅР° РЅРµРІРµСЂРЅРѕ";
+const std::string ERROR_NOT_NAME = ". РћС€РёР±РєР°: РёРјСЏ РІРІРµРґРµРЅРѕ РЅРµРІРµСЂРЅРѕ";
+const std::string ERROR_NOT_YEAR_BIRTH = ". РћС€РёР±РєР°: РіРѕРґ СЂРѕР¶РґРµРЅРёСЏ РІРІРµРґС‘РЅ РЅРµРІРµСЂРЅРѕ";
 
 bool isSurname(const String& surname);
 bool isSurname(const std::string& surname);
@@ -51,7 +51,7 @@ bool isPerson(const Person<std::string>& ob)
 	return true;
 }
 
-// Проверка корректности фамилии
+// РџСЂРѕРІРµСЂРєР° РєРѕСЂСЂРµРєС‚РЅРѕСЃС‚Рё С„Р°РјРёР»РёРё
 bool isSurname(const String& surname)
 {
 	size_t sizeStr = surname.getSize();
@@ -66,7 +66,7 @@ bool isSurname(const std::string& surname)
 	return isCorrectSurname(surname, sizeStr);
 }
 
-// Проверка корректности имени
+// РџСЂРѕРІРµСЂРєР° РєРѕСЂСЂРµРєС‚РЅРѕСЃС‚Рё РёРјРµРЅРё
 bool isName(const String& name)
 {
 	size_t sizeStr = name.getSize();
@@ -81,7 +81,7 @@ bool isName(const std::string& name)
 	return isCorrectName(name, sizeStr);
 }
 
-// Проверка корректности года рождения
+// РџСЂРѕРІРµСЂРєР° РєРѕСЂСЂРµРєС‚РЅРѕСЃС‚Рё РіРѕРґР° СЂРѕР¶РґРµРЅРёСЏ
 bool isYearBirth(const String& yearBirth)
 {
 	size_t sizeStr = yearBirth.getSize();

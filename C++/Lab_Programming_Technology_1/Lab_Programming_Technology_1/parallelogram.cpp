@@ -1,7 +1,7 @@
-#include "parallelogram.h"
+п»ї#include "parallelogram.h"
 #include <iostream>
 
-// Параметризованный конструктор
+// РџР°СЂР°РјРµС‚СЂРёР·РѕРІР°РЅРЅС‹Р№ РєРѕРЅСЃС‚СЂСѓРєС‚РѕСЂ
 Parallelogram::Parallelogram(double x1, double y1, double x2, double y2, double x3, double y3) : vertex1_(x1, y1), vertex2_(x2, y2), vertex3_(x3, y3)
 {
 	if (y2 == y3)
@@ -27,7 +27,7 @@ Parallelogram::Parallelogram(double x1, double y1, double x2, double y2, double 
 	isCorrect();
 }
 
-// Вычисление площади
+// Р’С‹С‡РёСЃР»РµРЅРёРµ РїР»РѕС‰Р°РґРё
 double Parallelogram::getArea() const
 {
 	double height = 0;
@@ -36,7 +36,7 @@ double Parallelogram::getArea() const
 	return height * (vertex2_.x_ - vertex1_.x_);
 }
 
-// Получение ограничивающего прямоугольника
+// РџРѕР»СѓС‡РµРЅРёРµ РѕРіСЂР°РЅРёС‡РёРІР°СЋС‰РµРіРѕ РїСЂСЏРјРѕСѓРіРѕР»СЊРЅРёРєР°
 rectangle_t Parallelogram::getFrameRect() const
 {
 	rectangle_t temp;
@@ -48,7 +48,7 @@ rectangle_t Parallelogram::getFrameRect() const
 	return temp;
 }
 
-// Перемещение центра фигуры в конкретную точку
+// РџРµСЂРµРјРµС‰РµРЅРёРµ С†РµРЅС‚СЂР° С„РёРіСѓСЂС‹ РІ РєРѕРЅРєСЂРµС‚РЅСѓСЋ С‚РѕС‡РєСѓ
 void Parallelogram::move(point_t newPos)
 {
 	if ((newPos.x_ != centre_.x_) || (newPos.y_ != centre_.y_))
@@ -69,7 +69,7 @@ void Parallelogram::move(point_t newPos)
 	}
 }
 
-// Перемещение центра фигуры в виде смещений по осям абсцисс и ординат
+// РџРµСЂРµРјРµС‰РµРЅРёРµ С†РµРЅС‚СЂР° С„РёРіСѓСЂС‹ РІ РІРёРґРµ СЃРјРµС‰РµРЅРёР№ РїРѕ РѕСЃСЏРј Р°Р±СЃС†РёСЃСЃ Рё РѕСЂРґРёРЅР°С‚
 void Parallelogram::move(double k1, double k2)
 {
 	this->vertex1_.x_ += k1;
@@ -82,7 +82,7 @@ void Parallelogram::move(double k1, double k2)
 	this->centre_.y_ += k2;
 }
 
-// Изотропное масштабирование
+// РР·РѕС‚СЂРѕРїРЅРѕРµ РјР°СЃС€С‚Р°Р±РёСЂРѕРІР°РЅРёРµ
 void Parallelogram::scale(double k)
 {
 	this->vertex1_.x_ = centre_.x_ + k * (vertex1_.x_ - centre_.x_);
@@ -93,16 +93,16 @@ void Parallelogram::scale(double k)
 	this->vertex3_.y_ = centre_.y_ + k * (vertex3_.y_ - centre_.y_);
 }
 
-// Печать данных о фигуре
+// РџРµС‡Р°С‚СЊ РґР°РЅРЅС‹С… Рѕ С„РёРіСѓСЂРµ
 void Parallelogram::print() const
 {
-	std::cout << "Первая вершина: (" << vertex1_.x_ << "; " << vertex1_.y_ << ") "
-		<< "Вторая вершина: (" << vertex2_.x_ << "; " << vertex2_.y_ << ") "
-		<< "Третья вершина: (" << vertex3_.x_ << "; " << vertex3_.y_ << ") "
-		<< "Центр: (" << centre_.x_ << "; " << centre_.y_ << ")\n";
+	std::cout << "РџРµСЂРІР°СЏ РІРµСЂС€РёРЅР°: (" << vertex1_.x_ << "; " << vertex1_.y_ << ") "
+		<< "Р’С‚РѕСЂР°СЏ РІРµСЂС€РёРЅР°: (" << vertex2_.x_ << "; " << vertex2_.y_ << ") "
+		<< "РўСЂРµС‚СЊСЏ РІРµСЂС€РёРЅР°: (" << vertex3_.x_ << "; " << vertex3_.y_ << ") "
+		<< "Р¦РµРЅС‚СЂ: (" << centre_.x_ << "; " << centre_.y_ << ")\n";
 }
 
-// Проверка корректности прямоугольника
+// РџСЂРѕРІРµСЂРєР° РєРѕСЂСЂРµРєС‚РЅРѕСЃС‚Рё РїСЂСЏРјРѕСѓРіРѕР»СЊРЅРёРєР°
 void Parallelogram::isCorrect() const
 {
 	if ((vertex1_.y_ == vertex2_.y_) && (vertex1_.y_ != vertex3_.y_) &&

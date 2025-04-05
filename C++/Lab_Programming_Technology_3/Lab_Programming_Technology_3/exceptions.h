@@ -1,11 +1,11 @@
-#ifndef _EXCEPTIONS_H
+п»ї#ifndef _EXCEPTIONS_H
 #define _EXCEPTIONS_H
 #include <exception>
 
 class ErrorOpenFile : public std::exception
 {
 public:
-	ErrorOpenFile() : reason_("ERROR: Не удалось открыть данный файл") {};
+	ErrorOpenFile() : reason_("ERROR: РќРµ СѓРґР°Р»РѕСЃСЊ РѕС‚РєСЂС‹С‚СЊ РґР°РЅРЅС‹Р№ С„Р°Р№Р»") {};
 	const char* what() const { return reason_; };
 private:
 	const char* reason_;
@@ -23,7 +23,7 @@ private:
 class ErrorVectorIsEmpty : public std::exception
 {
 public:
-	ErrorVectorIsEmpty() : reason_("ERROR: Для этой команды необходимо наличие хотя бы одной фигуры") {};
+	ErrorVectorIsEmpty() : reason_("ERROR: Р”Р»СЏ СЌС‚РѕР№ РєРѕРјР°РЅРґС‹ РЅРµРѕР±С…РѕРґРёРјРѕ РЅР°Р»РёС‡РёРµ С…РѕС‚СЏ Р±С‹ РѕРґРЅРѕР№ С„РёРіСѓСЂС‹") {};
 	const char* what() const { return reason_; };
 private:
 	const char* reason_;

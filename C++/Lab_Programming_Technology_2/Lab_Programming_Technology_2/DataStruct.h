@@ -1,4 +1,4 @@
-#ifndef _DATA_STRUCT
+﻿#ifndef _DATA_STRUCT
 #define _DATA_STRUCT
 #include <string>
 #include <complex>

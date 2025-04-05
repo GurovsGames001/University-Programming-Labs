@@ -1,4 +1,4 @@
-#include <iostream>
+ï»¿#include <iostream>
 #include <memory>
 #include "rectangle.h"
 #include "circle.h"
@@ -15,11 +15,11 @@ int main()
 		std::shared_ptr<Shape> circle = std::make_shared<Circle>(1.5, -2, 9.8);
 		std::shared_ptr<Shape> parallelogram = std::make_shared<Parallelogram>(2.4, 1, 8, 1, 6.5, 5.7);
 
-		std::cout << "\n-----------Ïðÿìîóãîëüíèê-----------\n";
+		std::cout << "\n-----------ÐŸÑ€ÑÐ¼Ð¾ÑƒÐ³Ð¾Ð»ÑŒÐ½Ð¸Ðº-----------\n";
 		testShape(rectangle);
-		std::cout << "\n-----------Êðóã-----------\n";
+		std::cout << "\n-----------ÐšÑ€ÑƒÐ³-----------\n";
 		testShape(circle);
-		std::cout << "\n-----------Ïàðàëëåëîãðàìì-----------\n";
+		std::cout << "\n-----------ÐŸÐ°Ñ€Ð°Ð»Ð»ÐµÐ»Ð¾Ð³Ñ€Ð°Ð¼Ð¼-----------\n";
 		testShape(parallelogram);
 	}
 

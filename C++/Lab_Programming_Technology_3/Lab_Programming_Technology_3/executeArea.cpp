@@ -1,4 +1,4 @@
-#include "functions.h"
+﻿#include "functions.h"
 #include "exceptions.h"
 
 double getRightArea(const Polygon& p, const std::string& parameter);

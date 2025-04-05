@@ -1,10 +1,10 @@
-#include "String.h"
+п»ї#include "String.h"
 #include <utility>
 #include <string>
 
-const std::string ERROR_INDEX = "Ошибка: индекс элемента не соответствует размеру строки";
+const std::string ERROR_INDEX = "РћС€РёР±РєР°: РёРЅРґРµРєСЃ СЌР»РµРјРµРЅС‚Р° РЅРµ СЃРѕРѕС‚РІРµС‚СЃС‚РІСѓРµС‚ СЂР°Р·РјРµСЂСѓ СЃС‚СЂРѕРєРё";
 
-// Конструкторы
+// РљРѕРЅСЃС‚СЂСѓРєС‚РѕСЂС‹
 
 String::String(const char* str)
 {
@@ -14,7 +14,7 @@ String::String(const char* str)
 	this->copy(str);
 }
 
-// Методы из private
+// РњРµС‚РѕРґС‹ РёР· private
 
 size_t String::length(const char* str)
 {
@@ -43,7 +43,7 @@ void String::swap(String& str)
 	std::swap(pointer_, str.pointer_);
 }
 
-// Методы из public
+// РњРµС‚РѕРґС‹ РёР· public
 
 size_t String::getSize() const
 {
@@ -75,7 +75,7 @@ int String::compare(const String& str) const
 	return result;
 }
 
-// Перегруженные операторы
+// РџРµСЂРµРіСЂСѓР¶РµРЅРЅС‹Рµ РѕРїРµСЂР°С‚РѕСЂС‹
 
 String& String::operator=(const char* str)
 {

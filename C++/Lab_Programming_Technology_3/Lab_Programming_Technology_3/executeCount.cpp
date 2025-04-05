@@ -1,4 +1,4 @@
-#include "functions.h"
+﻿#include "functions.h"
 
 void executeCount(const std::vector<Polygon>& data, const std::string& parameter)
 {

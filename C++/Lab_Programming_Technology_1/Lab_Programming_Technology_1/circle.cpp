@@ -1,15 +1,15 @@
-#define _USE_MATH_DEFINES
+п»ї#define _USE_MATH_DEFINES
 #include "circle.h"
 #include <cmath>
 #include <iostream>
 
-// Вычисление площади
+// Р’С‹С‡РёСЃР»РµРЅРёРµ РїР»РѕС‰Р°РґРё
 double Circle::getArea() const
 {
 	return M_PI * radius_ * radius_;
 }
 
-// Получение ограничивающего прямоугольника
+// РџРѕР»СѓС‡РµРЅРёРµ РѕРіСЂР°РЅРёС‡РёРІР°СЋС‰РµРіРѕ РїСЂСЏРјРѕСѓРіРѕР»СЊРЅРёРєР°
 rectangle_t Circle::getFrameRect() const
 {
 	rectangle_t temp;
@@ -21,7 +21,7 @@ rectangle_t Circle::getFrameRect() const
 	return temp;
 }
 
-// Перемещение центра фигуры в конкретную точку
+// РџРµСЂРµРјРµС‰РµРЅРёРµ С†РµРЅС‚СЂР° С„РёРіСѓСЂС‹ РІ РєРѕРЅРєСЂРµС‚РЅСѓСЋ С‚РѕС‡РєСѓ
 void Circle::move(point_t newPos)
 {
 	if ((newPos.x_ != centre_.x_) || (newPos.y_ != centre_.y_))
@@ -30,27 +30,27 @@ void Circle::move(point_t newPos)
 	}
 }
 
-// Перемещение центра фигуры в виде смещений по осям абсцисс и ординат
+// РџРµСЂРµРјРµС‰РµРЅРёРµ С†РµРЅС‚СЂР° С„РёРіСѓСЂС‹ РІ РІРёРґРµ СЃРјРµС‰РµРЅРёР№ РїРѕ РѕСЃСЏРј Р°Р±СЃС†РёСЃСЃ Рё РѕСЂРґРёРЅР°С‚
 void Circle::move(double k1, double k2)
 {
 	this->centre_.x_ += k1;
 	this->centre_.y_ += k2;
 }
 
-// Изотропное масштабирование
+// РР·РѕС‚СЂРѕРїРЅРѕРµ РјР°СЃС€С‚Р°Р±РёСЂРѕРІР°РЅРёРµ
 void Circle::scale(double k)
 {
 	this->radius_ *= k;
 }
 
-// Печать данных о фигуре
+// РџРµС‡Р°С‚СЊ РґР°РЅРЅС‹С… Рѕ С„РёРіСѓСЂРµ
 void Circle::print() const
 {
-	std::cout << "Радиус: " << radius_
-		<< " Центр: (" << centre_.x_ << "; " << centre_.y_ << ")\n";
+	std::cout << "Р Р°РґРёСѓСЃ: " << radius_
+		<< " Р¦РµРЅС‚СЂ: (" << centre_.x_ << "; " << centre_.y_ << ")\n";
 }
 
-// Проверка корректности прямоугольника
+// РџСЂРѕРІРµСЂРєР° РєРѕСЂСЂРµРєС‚РЅРѕСЃС‚Рё РїСЂСЏРјРѕСѓРіРѕР»СЊРЅРёРєР°
 void Circle::isCorrect() const
 {
 	if (radius_ <= 0)

@@ -1,4 +1,4 @@
-#ifndef PERSON_H
+п»ї#ifndef PERSON_H
 #define PERSON_H
 #include <iostream>
 #include <fstream>
@@ -35,7 +35,7 @@ private:
 	void swap(Person& object);
 };
 
-// Конструкторы
+// РљРѕРЅСЃС‚СЂСѓРєС‚РѕСЂС‹
 
 template <class Lines>
 Person<Lines>::Person(const char* str)
@@ -49,7 +49,7 @@ Person<Lines>::Person(const char* str)
 	isPerson(*this);
 }
 
-// Методы из public
+// РњРµС‚РѕРґС‹ РёР· public
 
 template <class Lines>
 Lines Person<Lines>::getSurname()
@@ -69,7 +69,7 @@ Lines Person<Lines>::getYearBirth()
 	return yearBirth_;
 }
 
-// Методы из private
+// РњРµС‚РѕРґС‹ РёР· private
 
 template <class Lines>
 size_t Person<Lines>::lengthToSymbol(const char* str, int pos, char symbol)
@@ -114,7 +114,7 @@ void Person<Lines>::swap(Person<Lines>& object)
 	std::swap(yearBirth_, object.yearBirth_);
 }
 
-// Перегруженные операторы
+// РџРµСЂРµРіСЂСѓР¶РµРЅРЅС‹Рµ РѕРїРµСЂР°С‚РѕСЂС‹
 
 template <class Lines>
 Person<Lines>& Person<Lines>::operator=(char* str)

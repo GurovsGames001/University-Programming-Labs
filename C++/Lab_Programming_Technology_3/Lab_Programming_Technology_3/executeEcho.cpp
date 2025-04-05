@@ -1,4 +1,4 @@
-#include "functions.h"
+п»ї#include "functions.h"
 
 void countCopy(std::vector<Polygon>::iterator& pos, std::vector<Polygon>& data, const Polygon& parameter, int& result);
 
@@ -6,7 +6,7 @@ void executeEcho(std::vector<Polygon>& data, const Polygon& parameter)
 {
 	int result = 0;
 
-	// Реализация через цикл
+	// Р РµР°Р»РёР·Р°С†РёСЏ С‡РµСЂРµР· С†РёРєР»
 	/*std::vector<Polygon>::iterator pos = data.begin();
 	while (pos != data.end())
 	{
@@ -23,7 +23,7 @@ void executeEcho(std::vector<Polygon>& data, const Polygon& parameter)
 		}
 	}*/
 
-	// Реализация через рекурсию
+	// Р РµР°Р»РёР·Р°С†РёСЏ С‡РµСЂРµР· СЂРµРєСѓСЂСЃРёСЋ
 	std::vector<Polygon>::iterator pos = data.begin();
 	countCopy(pos, data, parameter, result);
 

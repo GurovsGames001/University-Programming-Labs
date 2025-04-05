@@ -1,7 +1,7 @@
-#include "rectangle.h"
+п»ї#include "rectangle.h"
 #include <iostream>
 
-// Параметризованный конструктор
+// РџР°СЂР°РјРµС‚СЂРёР·РѕРІР°РЅРЅС‹Р№ РєРѕРЅСЃС‚СЂСѓРєС‚РѕСЂ
 Rectangle::Rectangle(double x1, double y1, double x2, double y2) : leftPoint_(x1, y1), rightPoint_(x2, y2)
 {
 	if (x1 > x2)
@@ -15,7 +15,7 @@ Rectangle::Rectangle(double x1, double y1, double x2, double y2) : leftPoint_(x1
 	isCorrect();
 }
 
-// Вычисление площади
+// Р’С‹С‡РёСЃР»РµРЅРёРµ РїР»РѕС‰Р°РґРё
 double Rectangle::getArea() const
 {
 	double width = 0;
@@ -27,7 +27,7 @@ double Rectangle::getArea() const
 	return width * height;
 }
 
-// Получение ограничивающего прямоугольника
+// РџРѕР»СѓС‡РµРЅРёРµ РѕРіСЂР°РЅРёС‡РёРІР°СЋС‰РµРіРѕ РїСЂСЏРјРѕСѓРіРѕР»СЊРЅРёРєР°
 rectangle_t Rectangle::getFrameRect() const
 {
 	rectangle_t temp;
@@ -39,7 +39,7 @@ rectangle_t Rectangle::getFrameRect() const
 	return temp;
 }
 
-// Перемещение центра фигуры в конкретную точку
+// РџРµСЂРµРјРµС‰РµРЅРёРµ С†РµРЅС‚СЂР° С„РёРіСѓСЂС‹ РІ РєРѕРЅРєСЂРµС‚РЅСѓСЋ С‚РѕС‡РєСѓ
 void Rectangle::move(point_t newPos)
 {
 	if ((newPos.x_ != centre_.x_) || (newPos.y_ != centre_.y_))
@@ -58,7 +58,7 @@ void Rectangle::move(point_t newPos)
 	}
 }
 
-// Перемещение центра фигуры в виде смещений по осям абсцисс и ординат
+// РџРµСЂРµРјРµС‰РµРЅРёРµ С†РµРЅС‚СЂР° С„РёРіСѓСЂС‹ РІ РІРёРґРµ СЃРјРµС‰РµРЅРёР№ РїРѕ РѕСЃСЏРј Р°Р±СЃС†РёСЃСЃ Рё РѕСЂРґРёРЅР°С‚
 void Rectangle::move(double k1, double k2)
 {
 	this->leftPoint_.x_ += k1;
@@ -69,7 +69,7 @@ void Rectangle::move(double k1, double k2)
 	this->centre_.y_ += k2;
 }
 
-// Изотропное масштабирование
+// РР·РѕС‚СЂРѕРїРЅРѕРµ РјР°СЃС€С‚Р°Р±РёСЂРѕРІР°РЅРёРµ
 void Rectangle::scale(double k)
 {
 	this->leftPoint_.x_ = centre_.x_ + k * (leftPoint_.x_ - centre_.x_);
@@ -78,15 +78,15 @@ void Rectangle::scale(double k)
 	this->rightPoint_.y_ = centre_.y_ + k * (rightPoint_.y_ - centre_.y_);
 }
 
-// Печать данных о фигуре
+// РџРµС‡Р°С‚СЊ РґР°РЅРЅС‹С… Рѕ С„РёРіСѓСЂРµ
 void Rectangle::print() const
 {
-	std::cout << "Левый угол: (" << leftPoint_.x_ << "; " << leftPoint_.y_ << ") "
-		<< "Правый угол: (" << rightPoint_.x_ << "; " << rightPoint_.y_ << ") "
-		<< "Центр: (" << centre_.x_ << "; " << centre_.y_ << ")\n";
+	std::cout << "Р›РµРІС‹Р№ СѓРіРѕР»: (" << leftPoint_.x_ << "; " << leftPoint_.y_ << ") "
+		<< "РџСЂР°РІС‹Р№ СѓРіРѕР»: (" << rightPoint_.x_ << "; " << rightPoint_.y_ << ") "
+		<< "Р¦РµРЅС‚СЂ: (" << centre_.x_ << "; " << centre_.y_ << ")\n";
 }
 
-// Проверка корректности прямоугольника
+// РџСЂРѕРІРµСЂРєР° РєРѕСЂСЂРµРєС‚РЅРѕСЃС‚Рё РїСЂСЏРјРѕСѓРіРѕР»СЊРЅРёРєР°
 void Rectangle::isCorrect() const
 {
 	if (leftPoint_.x_ < rightPoint_.x_)

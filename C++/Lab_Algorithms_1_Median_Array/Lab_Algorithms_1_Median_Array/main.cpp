@@ -1,4 +1,4 @@
-#include <iostream>
+п»ї#include <iostream>
 #include <vector>
 
 struct PairIndexes
@@ -54,17 +54,17 @@ void readAndWriteFile(std::istream& inStream, std::ostream& outStream)
 
 int select(std::vector<int>& a, unsigned int firstIndex, unsigned int lastIndex, unsigned int k)
 {
-	// Вход: массив a[0..n - 1] из натуральных чисел;
-	//		 целые числа firstIndex и lastIndex, такие что 0 <= firstIndex <= lastIndex <= n - 1;
-	//		 целое число k, такое что 0 <= k <= n - 1.
-	// Выход: k-я порядковая статистика массива a.
+	// Р’С…РѕРґ: РјР°СЃСЃРёРІ a[0..n - 1] РёР· РЅР°С‚СѓСЂР°Р»СЊРЅС‹С… С‡РёСЃРµР»;
+	//		 С†РµР»С‹Рµ С‡РёСЃР»Р° firstIndex Рё lastIndex, С‚Р°РєРёРµ С‡С‚Рѕ 0 <= firstIndex <= lastIndex <= n - 1;
+	//		 С†РµР»РѕРµ С‡РёСЃР»Рѕ k, С‚Р°РєРѕРµ С‡С‚Рѕ 0 <= k <= n - 1.
+	// Р’С‹С…РѕРґ: k-СЏ РїРѕСЂСЏРґРєРѕРІР°СЏ СЃС‚Р°С‚РёСЃС‚РёРєР° РјР°СЃСЃРёРІР° a.
 
 	if (firstIndex <= lastIndex)
 	{
 		srand(time(0));
 		int p = a[firstIndex + (rand() % (lastIndex - firstIndex + 1))];
 
-		// Делим массив относительно элемента, стоящего в центре массива a
+		// Р”РµР»РёРј РјР°СЃСЃРёРІ РѕС‚РЅРѕСЃРёС‚РµР»СЊРЅРѕ СЌР»РµРјРµРЅС‚Р°, СЃС‚РѕСЏС‰РµРіРѕ РІ С†РµРЅС‚СЂРµ РјР°СЃСЃРёРІР° a
 		//int p = a[(firstIndex + lastIndex) / 2];
 		PairIndexes pairIndexes = split(a, firstIndex, lastIndex, p);
 
@@ -83,20 +83,20 @@ int select(std::vector<int>& a, unsigned int firstIndex, unsigned int lastIndex,
 
 PairIndexes split(std::vector<int>& a, unsigned int firstIndex, unsigned int lastIndex, int p)
 {
-	// Вход: массив a[0..n - 1] из натуральных чисел;
-	//		 целые числа firstIndex и lastIndex, такие что 0 <= firstIndex <= lastIndex <= n - 1;
-	//		 натуральное число p, такое что p принадлежит массиву a.
-	// Выход: 1) целые числа lP и rP, такие что 0 <= lP <= rP <= n - 1;
-	//		  2) все элементы подмассива a[firstIndex..lP - 1] меньше p;
-	//		  3) все элементы подмассива a[lP..rP] равны p;
-	//		  4) все элементы подмассива a[rP + 1..lastIndex] больше p;
-	//		  5) a[firstIndex], a[firstIndex + 1], ..., a[lastIndex] - это перестановка элементов
-	//			 входного подмассива a[firstIndex..lastIndex];
-	//		  6) подмассивы a[0..firstIndex - 1] и a[lastIndex + 1..n - 1] совпадают
-	//			 с соответствующими подмассивами входного массива a[0..n - 1].
+	// Р’С…РѕРґ: РјР°СЃСЃРёРІ a[0..n - 1] РёР· РЅР°С‚СѓСЂР°Р»СЊРЅС‹С… С‡РёСЃРµР»;
+	//		 С†РµР»С‹Рµ С‡РёСЃР»Р° firstIndex Рё lastIndex, С‚Р°РєРёРµ С‡С‚Рѕ 0 <= firstIndex <= lastIndex <= n - 1;
+	//		 РЅР°С‚СѓСЂР°Р»СЊРЅРѕРµ С‡РёСЃР»Рѕ p, С‚Р°РєРѕРµ С‡С‚Рѕ p РїСЂРёРЅР°РґР»РµР¶РёС‚ РјР°СЃСЃРёРІСѓ a.
+	// Р’С‹С…РѕРґ: 1) С†РµР»С‹Рµ С‡РёСЃР»Р° lP Рё rP, С‚Р°РєРёРµ С‡С‚Рѕ 0 <= lP <= rP <= n - 1;
+	//		  2) РІСЃРµ СЌР»РµРјРµРЅС‚С‹ РїРѕРґРјР°СЃСЃРёРІР° a[firstIndex..lP - 1] РјРµРЅСЊС€Рµ p;
+	//		  3) РІСЃРµ СЌР»РµРјРµРЅС‚С‹ РїРѕРґРјР°СЃСЃРёРІР° a[lP..rP] СЂР°РІРЅС‹ p;
+	//		  4) РІСЃРµ СЌР»РµРјРµРЅС‚С‹ РїРѕРґРјР°СЃСЃРёРІР° a[rP + 1..lastIndex] Р±РѕР»СЊС€Рµ p;
+	//		  5) a[firstIndex], a[firstIndex + 1], ..., a[lastIndex] - СЌС‚Рѕ РїРµСЂРµСЃС‚Р°РЅРѕРІРєР° СЌР»РµРјРµРЅС‚РѕРІ
+	//			 РІС…РѕРґРЅРѕРіРѕ РїРѕРґРјР°СЃСЃРёРІР° a[firstIndex..lastIndex];
+	//		  6) РїРѕРґРјР°СЃСЃРёРІС‹ a[0..firstIndex - 1] Рё a[lastIndex + 1..n - 1] СЃРѕРІРїР°РґР°СЋС‚
+	//			 СЃ СЃРѕРѕС‚РІРµС‚СЃС‚РІСѓСЋС‰РёРјРё РїРѕРґРјР°СЃСЃРёРІР°РјРё РІС…РѕРґРЅРѕРіРѕ РјР°СЃСЃРёРІР° a[0..n - 1].
 
-	int i = firstIndex - 1; // Индекс последнего элемента в подмассиве элементов, меньших p
-	int j = firstIndex - 1; // Индекс последнего элемента в подмассиве элементов, равных p
+	int i = firstIndex - 1; // РРЅРґРµРєСЃ РїРѕСЃР»РµРґРЅРµРіРѕ СЌР»РµРјРµРЅС‚Р° РІ РїРѕРґРјР°СЃСЃРёРІРµ СЌР»РµРјРµРЅС‚РѕРІ, РјРµРЅСЊС€РёС… p
+	int j = firstIndex - 1; // РРЅРґРµРєСЃ РїРѕСЃР»РµРґРЅРµРіРѕ СЌР»РµРјРµРЅС‚Р° РІ РїРѕРґРјР°СЃСЃРёРІРµ СЌР»РµРјРµРЅС‚РѕРІ, СЂР°РІРЅС‹С… p
 	unsigned int k = firstIndex;
 
 	for (k; k <= lastIndex; k++)

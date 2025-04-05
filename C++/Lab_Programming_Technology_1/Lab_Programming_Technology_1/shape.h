@@ -1,4 +1,4 @@
-#ifndef _SHAPE
+п»ї#ifndef _SHAPE
 #define _SHAPE
 #include "base-types.h"
 #include "exception.h"
@@ -8,17 +8,17 @@ class Shape
 public:
 	virtual ~Shape() {};
 
-	virtual double getArea() const = 0; // Вычисление площади
-	virtual rectangle_t getFrameRect() const = 0; // Получение ограничивающего прямоугольника
-	virtual void move(point_t newPos) = 0; // Перемещение центра фигуры в конкретную точку
-	virtual void move(double k1, double k2) = 0; // Перемещение центра фигуры в виде смещений по осям абсцисс и ординат
-	virtual void scale(double k) = 0; // Изотропное масштабирование
-	virtual void print() const = 0; // Печать данных о фигуре
+	virtual double getArea() const = 0; // Р’С‹С‡РёСЃР»РµРЅРёРµ РїР»РѕС‰Р°РґРё
+	virtual rectangle_t getFrameRect() const = 0; // РџРѕР»СѓС‡РµРЅРёРµ РѕРіСЂР°РЅРёС‡РёРІР°СЋС‰РµРіРѕ РїСЂСЏРјРѕСѓРіРѕР»СЊРЅРёРєР°
+	virtual void move(point_t newPos) = 0; // РџРµСЂРµРјРµС‰РµРЅРёРµ С†РµРЅС‚СЂР° С„РёРіСѓСЂС‹ РІ РєРѕРЅРєСЂРµС‚РЅСѓСЋ С‚РѕС‡РєСѓ
+	virtual void move(double k1, double k2) = 0; // РџРµСЂРµРјРµС‰РµРЅРёРµ С†РµРЅС‚СЂР° С„РёРіСѓСЂС‹ РІ РІРёРґРµ СЃРјРµС‰РµРЅРёР№ РїРѕ РѕСЃСЏРј Р°Р±СЃС†РёСЃСЃ Рё РѕСЂРґРёРЅР°С‚
+	virtual void scale(double k) = 0; // РР·РѕС‚СЂРѕРїРЅРѕРµ РјР°СЃС€С‚Р°Р±РёСЂРѕРІР°РЅРёРµ
+	virtual void print() const = 0; // РџРµС‡Р°С‚СЊ РґР°РЅРЅС‹С… Рѕ С„РёРіСѓСЂРµ
 
 private:
 	point_t centre_;
 
-	virtual void isCorrect() const = 0; // Проверка корректности заданной фигуры
+	virtual void isCorrect() const = 0; // РџСЂРѕРІРµСЂРєР° РєРѕСЂСЂРµРєС‚РЅРѕСЃС‚Рё Р·Р°РґР°РЅРЅРѕР№ С„РёРіСѓСЂС‹
 };
 
 #endif
